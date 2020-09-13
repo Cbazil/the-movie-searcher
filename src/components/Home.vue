@@ -99,7 +99,7 @@ export default {
             arr.push(i);
           }
           this.pages_full = pagesArr;
-          if (this.pages.length < 1 && arr.length > 3) {
+          if (this.pages.length < 1) {
             this.pages = arr.slice(0, 3);
           }
           let cut = Math.ceil(arr.length / 3);
@@ -112,6 +112,7 @@ export default {
         .catch((err) => {
           alert(err);
         });
+      console.log(this.pages);
     },
     tinyTitle(title) {
       return title.slice(0, 25) + "..";
