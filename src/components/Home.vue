@@ -115,7 +115,7 @@ export default {
       console.log(this.pages);
     },
     tinyTitle(title) {
-      return title.slice(0, 25) + "..";
+      return title.slice(0, 18) + "..";
     },
     selectPage(id) {
       // Researches based off new set page
@@ -165,7 +165,7 @@ export default {
   position: relative;
   width: 100%;
   display: grid;
-  height: 5vh;
+  height: 4vh;
   grid-template-columns: 11fr 1fr;
   background-color: white;
 }
@@ -180,7 +180,7 @@ export default {
 #search-btn {
   border: none;
   background-color: inherit;
-  height: 99.8%;
+  height: 100%;
   width: 100%;
 }
 #movie-details {
@@ -188,7 +188,7 @@ export default {
 }
 #movie-div {
   position: relative;
-  width: 100%;
+  width: 99.82%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 20px;
@@ -244,7 +244,7 @@ export default {
 #details-img {
   position: relative;
   width: 100%;
-  height: 45vh;
+  height: auto;
 }
 #details-img > img {
   width: 100%;
@@ -256,5 +256,65 @@ export default {
   float: left;
   width: 92%;
   padding: 5%;
+}
+/* desktop */
+@media (max-width: 780px) {
+  #container {
+    margin: 0 10%;
+  }
+  #app-name {
+    font-size: 45px;
+  }
+  .movie-case > img {
+    width: 100%;
+    height: 240px;
+  }
+  #movie-div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #details-txt > h1 {
+    font-size: 18px;
+  }
+  #details-txt > h3 {
+    font-size: 16px;
+  }
+  #details-txt > p {
+    font-size: 14px;
+  }
+}
+/* mobile */
+@media (max-width: 425px) {
+  #container {
+    margin: 0 5%;
+  }
+  #app-name {
+    font-size: 30px;
+  }
+  #movie-div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .movie-case > img {
+    width: 100%;
+    height: 220px;
+  }
+  .movie-case > h4 {
+    font-size: 12px;
+  }
+  #details-dev {
+    grid-template-columns: 1fr;
+  }
+  #details-txt {
+    margin-top: 5px;
+  }
+  #details-txt > h1 {
+    font-size: 16px;
+  }
+  #details-txt > h3 {
+    font-size: 14px;
+  }
+  #details-txt > p {
+    font-size: 12px;
+  }
 }
 </style>
