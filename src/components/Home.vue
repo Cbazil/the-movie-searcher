@@ -165,7 +165,7 @@ export default {
   position: relative;
   width: 100%;
   display: grid;
-  height: 4vh;
+  height: 34px;
   grid-template-columns: 11fr 1fr;
   background-color: white;
 }
@@ -294,6 +294,9 @@ export default {
   }
   #app-name {
     font-size: 30px;
+  }
+  #search-bar {
+    height: 28px;
   }
   .s-icon {
     font-size: 16px;
