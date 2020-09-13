@@ -4,7 +4,7 @@
     <div id="search-bar">
       <input id="search-txt" type="text" v-model="search_input" />
       <button id="search-btn" @click="searchMovie">
-        <i class="fas fa-search" style="color: #424242; font-size: 22px"></i>
+        <i class="fas fa-search s-icon"></i>
       </button>
     </div>
     <div v-if="mode == 0" id="movie-div">
@@ -183,6 +183,10 @@ export default {
   height: 100%;
   width: 100%;
 }
+.s-icon {
+  color: #424242;
+  font-size: 22px;
+}
 #movie-details {
   margin-top: 20px;
 }
@@ -290,6 +294,9 @@ export default {
   }
   #app-name {
     font-size: 30px;
+  }
+  .s-icon {
+    font-size: 16px;
   }
   #movie-div {
     grid-template-columns: 1fr 1fr;
