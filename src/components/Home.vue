@@ -92,7 +92,7 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.movies = data.results;
-          this.pages = [];
+          // this.pages = [];
           this.page = 1;
           let pagesArr = [];
           let arr = [];
