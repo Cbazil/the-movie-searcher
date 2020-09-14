@@ -92,6 +92,8 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.movies = data.results;
+          this.pages = [];
+          this.page = 1;
           let pagesArr = [];
           let arr = [];
           for (let i = 1, count = 0; count < data.total_pages; count++, i++) {
@@ -112,7 +114,6 @@ export default {
         .catch((err) => {
           alert(err);
         });
-      console.log(this.pages);
     },
     tinyTitle(title) {
       return title.slice(0, 18) + "..";
@@ -325,6 +326,10 @@ export default {
   }
   #details-txt > p {
     font-size: 12px;
+  }
+  .pagination-btn {
+    width: 30px;
+    height: 30px;
   }
 }
 </style>
